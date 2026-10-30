@@ -9,8 +9,6 @@ For specimens that appear as a bright circular ring in each slice, with pores as
 3. links pores that overlap in consecutive slices into 3-D pores (union-find),
 4. reports each pore's volume, size, surface area, sphericity, shape and position on the ring, and writes a CSV.
 
-![One pore through consecutive slices](docs/pore_montage.png)
-
 ## Build
 
 Requires g++ 9+ (C++17) and OpenCV 4.
@@ -52,8 +50,6 @@ Set `--dx --dy --dz` to your voxel size, otherwise results are in pixels.
 
 Console table per stack (ID, z-range, voxels, volume, equivalent diameter, sphericity, c/a, fill ratio, centroid, angle, shape flag), plus an optional CSV with one row per pore. The CSV can be used as a feature table for machine learning.
 
-![Debug overlay](docs/overlay_synth.png)
-
 Green = fitted ring, red = detected pore with its ID.
 
 ## How it works
@@ -87,18 +83,4 @@ python3 make_synthetic_stack.py synth_stack 10     # ring width in px
 
 | File | Purpose |
 |---|---|
-| `pore_analyzer.cpp` | the whole program |
-| `make_synthetic_stack.py` | synthetic stack generator for testing (needs numpy, Pillow) |
-| `docs/` | figures used in this README |
-
-## Citation
-
-If you use this code, please cite the accompanying preprint: *TODO: add title, authors, and link/DOI once posted.*
-
-## License
-
-TODO: add a license file (for example MIT) and state it here.
-
-## Author
-
-TODO: name, affiliation, contact.
+| `code.cpp` | the whole program |
